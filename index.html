@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Homework #3: Global Developments - CSE 578 - Fall 2023</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="nrengaha.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="myContainer">
+        <h1 class="text-center">Homework #3: Global Developments</h1>
+        <h3 class="text-center">Nishanthan Rengaharan - nrengaha@asu.edu</h3>
+        <hr>
+
+        <div class="controls">
+            <div class="row">
+
+                <div class="col-1">X-Axis: </div>
+                <div class="col-2">
+                    <select class="dropdown" id="xaxisDropdown" onchange="drawChart()">
+                        <!-- <option value=" " disabled selected hidden>Select Attribute</option> -->
+                    </select>
+                </div>
+
+                <div class="col-1">Size: </div>
+                <div class="col-2">
+                    <select class="dropdown" id="sizeDropdown" onchange="drawChart()">
+                        <!-- <option value=" " disabled selected hidden>Select Attribute</option> -->
+                    </select>
+                </div>
+
+                <div class="col-1">Region: </div>
+                <div class="col-2">
+                        
+                    <label class="checkbox"><input type="checkbox" name ="selectAll" onchange="selectAll(this)" checked> -----Select All-----</label>
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>Europe & Central Asia</label>
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>Sub-Saharan Africa</label>
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>Middle East & North Africa</label>
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>South Asia</label>  
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>Latin America & Caribbean</label>
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>East Asia & Pacific</label>
+                        <label class="checkbox"><input type="checkbox" name ="checkbox"  onchange="drawChart()" checked>North America</label>
+                        
+                        
+                </div>
+
+                <div class="col-1">Year: </div>
+                <div class="col-2">
+                    <select class="dropdown" id="yearDropdown" onchange="drawChart()">
+                        <!-- <option value=" " disabled selected hidden>Select Year</option> -->
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-2">
+                    <button id="playButton" onclick="play()">Play</button>
+                </div>
+            </div>
+
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <hr>        
+        <div class="col-1">Beeswarm Chart: </div>
+        <div class="spinner-container" id="spinnerContainer">
+            <div class="spinner"></div>
+        </div>
+        
+        <div id="myDataVis" >
+            <svg id="beeSwarmChart" width="1500" height="725" style="border: 1px solid black; margin: auto; display: block;"></svg>
+        </div>
+
+</body>
+
+</html>
